@@ -19,6 +19,8 @@ class SlackBot extends AzureFunction
 
         $response = [
             'text' => '',
+            'username' => 'phpconkansai2017demo',
+            'icon_emoji' => ':phpkansai:',
             'attachments' => [[
                 "color" => '#00BFFF', // blue
                 "title" => 'メッセージを受信しました',

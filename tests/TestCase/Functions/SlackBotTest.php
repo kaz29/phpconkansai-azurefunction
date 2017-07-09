@@ -38,6 +38,8 @@ class SLackBotTest extends TestCase
 
         $result = json_decode($this->getResponse(), true);
         $expected = [
+            'username' => 'phpconkansai2017demo',
+            'icon_emoji' => ':phpkansai:',
             'text' => '',
             'attachments' => [[
                 "color" => '#00BFFF',
