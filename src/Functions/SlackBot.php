@@ -27,11 +27,11 @@ class SlackBot extends AzureFunction
                 "fields" => [[
                     'title' => 'ユーザー',
                     'value' => $params['user_name'],
-                    "short" => true
+                    "short" => false
                 ],[
                     'title' => 'メッセージ',
                     'value' => $params['text'],
-                    "short" => true
+                    "short" => false
                 ]]
             ]]
         ];

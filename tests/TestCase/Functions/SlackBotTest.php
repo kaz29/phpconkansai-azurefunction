@@ -47,11 +47,11 @@ class SLackBotTest extends TestCase
                 "fields" => [[
                     'title' => 'ユーザー',
                     'value' => 'userA',
-                    "short" => true
+                    "short" => false
                 ],[
                     'title' => 'メッセージ',
                     'value' => 'Hello Azure Function',
-                    "short" => true
+                    "short" => false
                 ]]
             ]]
         ];
