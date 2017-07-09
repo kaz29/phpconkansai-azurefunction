@@ -28,7 +28,7 @@ class SLackBotTest extends TestCase
         $params = [
             'token' => 'DUMMY',
             'user_name' => 'userA',
-            'text' => 'メッセージ'
+            'text' => 'Hello Azure Function'
         ];
         $this->makeHttpRequest($params);
         $this->makeResponse();
@@ -41,8 +41,16 @@ class SLackBotTest extends TestCase
             'text' => '',
             'attachments' => [[
                 "color" => '#00BFFF',
-                "User" => "userA",
-                "Message" => "メッセージ",
+                "title" => 'メッセージを受信しました',
+                "fields" => [[
+                    'title' => 'ユーザー',
+                    'value' => 'userA',
+                    "short" => true
+                ],[
+                    'title' => 'メッセージ',
+                    'value' => 'Hello Azure Function',
+                    "short" => true
+                ]]
             ]]
         ];
         $this->assertEquals($expected, $result);

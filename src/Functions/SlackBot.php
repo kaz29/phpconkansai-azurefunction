@@ -21,8 +21,16 @@ class SlackBot extends AzureFunction
             'text' => '',
             'attachments' => [[
                 "color" => '#00BFFF', // blue
-                "User" => $params['user_name'],
-                "Message" => $params['text'],
+                "title" => 'メッセージを受信しました',
+                "fields" => [[
+                    'title' => 'ユーザー',
+                    'value' => $params['user_name'],
+                    "short" => true
+                ],[
+                    'title' => 'メッセージ',
+                    'value' => $params['text'],
+                    "short" => true
+                ]]
             ]]
         ];
 
